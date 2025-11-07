@@ -1,0 +1,19 @@
+months = {
+    1: ("January", 31), 2: ("February", 28), 3: ("March", 31), 4: ("April", 30),
+    5: ("May", 31), 6: ("June", 30), 7: ("July", 31), 8: ("August", 31),
+    9: ("September", 30), 10: ("October", 31), 11: ("November", 30), 12: ("December", 31)
+}
+
+month_num = int(input("Enter the month number (1-12): "))
+
+if month_num not in months:
+    print("❌ That's not a valid month")
+else:
+    name, days = months[month_num]
+
+    if month_num == 2:
+        year = int(input("Enter the year: "))
+        if (year % 4 == 0 and year % 100 != 0) or (year % 400 == 0):
+            days = 29
+
+    print(f"📅 {name} has {days} days.")
