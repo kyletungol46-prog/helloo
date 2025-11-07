@@ -1,0 +1,9 @@
+correct_password = "12345"
+
+while True:
+    guess = input("Enter the password: ").strip()
+    if guess == correct_password:
+        print("Access granted. Welcome")
+        break
+    else:
+        print("Wrong password — try again")
