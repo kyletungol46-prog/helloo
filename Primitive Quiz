@@ -1,0 +1,21 @@
+print("European Capitals Quiz")
+
+quiz = {
+    "What's the capital of France?": "paris",
+    "What's the capital of Germany?": "berlin",
+    "What's the capital of Italy?": "rome",
+    "What's the capital of Spain?": "madrid",
+    "What's the capital of Portugal?": "lisbon",
+    "What's the capital of Greece?": "athens",
+    "What's the capital of the Netherlands?": "amsterdam",
+    "What's the capital of Belgium?": "brussels",
+    "What's the capital of Switzerland?": "bern",
+    "What's the capital of Austria?": "vienna",
+}
+
+for question, correct_answer in quiz.items():
+    answer = input(question + " ").strip().lower()
+    if answer == correct_answer:
+        print("Correct!")
+    else:
+        print(f"Wrong. The correct answer is {correct_answer.title()}")
