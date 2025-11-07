@@ -1,0 +1,19 @@
+name = input("What's your full name? ")
+hometown = input("Where are you from? ")
+
+age_input = input("How old are you? ")
+if age_input.isdigit():
+    age = int(age_input)
+else:
+    print("Oops! That doesnt look like a number. Ill just set your age to 0 for now.")
+    age = 0
+
+bio = {
+    "name": name,
+    "hometown": hometown,
+    "age": age
+}
+    
+print(f"Name: {bio['name']}")
+print(f"Hometown: {bio['hometown']}")
+print(f"Age: {bio['age']}")
